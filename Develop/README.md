@@ -15,4 +15,6 @@
         
 
 
-        ![README Screenshot](https://github.com/lanreabu77/Node.js-README-Generator-Challenge/assets/83088748/be44b1ba-cc78-4f18-9822-79758a0f4951)
+        
+<img width="1130" alt="Screenshot 2023-05-17 at 5 47 47 PM" src="https://github.com/lanreabu77/Node.js-README-Generator-Challenge/assets/83088748/ec3d4924-2df2-4fdc-a80d-f6e9da5f6d1f">
+
