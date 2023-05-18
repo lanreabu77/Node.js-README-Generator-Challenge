@@ -1,3 +1,4 @@
+// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 
@@ -11,7 +12,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please provide a brief description of your project:',
+        message: 'Please provied a brief description of your project:',
     },
     {
         type: 'input',
@@ -27,26 +28,48 @@ const questions = [
 
     {
         type: 'input',
-        name: 'github',
-        message: 'Please enter your github username:',
+        name: 'email',
+        message: 'Please enter your email address:',
+    
     },
 
     {
         type: 'input',
-        name: 'email',
-        message: 'Please enter your email:',
-    },
+        name: 'github',
+        message: 'Please enter your github username:',
+    
+    }
 ];
 
-inquirer.prompt([
-  // Prompt the user for input
-]).then((answers) => {
-  // Use the user's input to generate the README.md file
-  const readmeContent = `# ${answers.title}\n\n${answers.description}\n\n${answers.installation}\n\n${answers.screenshot}`;
+// TODO: Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+        err ? console.error(err) : console.log('README.md file generated!')
+    );
+}
 
-  // Write the generated README.md file to disk
-  fs.writeFileSync('README.md', readmeContent);
-});
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions).then((answers) => {
+        const readme = `
+        # ${answers.title}
+
+        ## Description
+
+        ${answers.description}
+
+        ## Installation
+
+        ${answers.installation}
+
+        ## Screenshot
+
+        ${answers.screenshot}
+
+        `;
+            writeToFile('README.md', readme);
+    });
+}
 
 // Function call to initialize app
 init();
