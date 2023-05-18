@@ -13,6 +13,4 @@
 
         Yes. Please see below screenshot for a visual of how the terminal should look once prompts have been completed.
 
-        ![README Screenshot](https://github.com/lanreabu77/Node.js-README-Generator-Challenge/assets/83088748/846ca220-6a7b-4b55-b164-2893fcfc4427)
-
-        
+       
